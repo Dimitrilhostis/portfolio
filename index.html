@@ -3,37 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio de Dimitri</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <!-- FontAwesome pour les icônes -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-content">
+            <img src="photo_cv_cropped.png" alt="Photo de Dimitri" class="profile-pic">
+            <h1>Dimitri L'Hostis</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#journey">Parcours</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Je suis un(e) professionnel(le) proposant des services variés dans [votre domaine].</p>
-    </section>
-    <section id="services">
-        <h2>Mes Services</h2>
-        <div>
-            <h3>Aide Ménagère</h3>
-            <p>Description rapide.</p>
-        </div>
-        <div>
-            <h3>Garde d’Enfants</h3>
-            <p>Description rapide.</p>
-        </div>
-    </section>
+
+    <!-- Sections principales -->
+    <main>
+        <section id="services" class="main-section">
+            <div class="section-row">
+                <div class="description">
+                    <h2>Services</h2>
+                    <p>Découvrez les services variés que je propose pour vous simplifier la vie.</p>
+                </div>
+                <div class="card" onclick="showDetails('services-details')">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Voir les services</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="main-section">
+            <div class="section-row">
+                <div class="description">
+                    <h2>Compétences</h2>
+                    <p>Mes qualifications et mes centres d'intérêt reflètent ma polyvalence.</p>
+                </div>
+                <div class="card" onclick="showDetails('skills-details')">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Voir les compétences</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="main-section">
+            <div class="section-row">
+                <div class="description">
+                    <h2>Parcours</h2>
+                    <p>Mon parcours scolaire, sportif et artistique a façonné qui je suis.</p>
+                </div>
+                <div class="card" onclick="showDetails('journey-details')">
+                    <i class="fas fa-route"></i>
+                    <h3>Voir le parcours</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Section contact -->
     <footer id="contact">
-        <h2>Contactez-moi</h2>
-        <p>Email : <a href="mailto:monemail@example.com">monemail@example.com</a></p>
+        <h2>Contact</h2>
+        <ul class="contact-list">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:dimit.lhostis@gmail.com">dimit.lhostis@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+33768704364">07 68 70 43 64</a></li>
+            <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dimitrilhs/" target="_blank">@dimitrilhs</a></li>
+            <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/dimitri.lhostis" target="_blank">Dimitri L'Hostis</a></li>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dimitri-l-hostis-65a14b32a/" target="_blank">Profil LinkedIn</a></li>
+        </ul>
     </footer>
+
+    <!-- Modale -->
+    <div id="details" class="details-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="hideDetails()">×</button>
+            <div id="services-details" class="detail-section">
+                <h2>Services</h2>
+                <ul>
+                    <li>Travaux pratiques : taille de haies, ménage, rangement.</li>
+                    <li>Services personnels : garde d’enfants, cuisine, promenade d’animaux.</li>
+                    <li>Tâches diverses : récupération de colis, plein d'essence, etc.</li>
+                </ul>
+            </div>
+            <div id="skills-details" class="detail-section">
+                <h2>Compétences</h2>
+                <ul>
+                    <li><strong>Diplômes :</strong> BAFA, Bac, ASSR2, Permis.</li>
+                    <li><strong>Skills :</strong> logique, pédagogie, forme physique.</li>
+                    <li><strong>Centres d'intérêt :</strong> cuisine, art, musique, sport, aide à autrui.</li>
+                </ul>
+            </div>
+            <div id="journey-details" class="detail-section">
+                <h2>Parcours</h2>
+                <ul>
+                    <li><strong>Scolaire :</strong> Bac scientifique, prépa intégrée en ingénierie, reconversion santé.</li>
+                    <li><strong>Sportif :</strong> Multisport (jusqu’à 12 ans), handball, musculation, course à pied.</li>
+                    <li><strong>Artistique :</strong> Dessin, guitare (5 ans), piano (2 ans).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
