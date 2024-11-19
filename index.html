@@ -18,6 +18,7 @@
             <h1>Dimitri L'Hostis</h1>
             <nav>
                 <ul>
+                    <li><a href="#quisuisje">Qui suis-je ?</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#skills">Compétences</a></li>
                     <li><a href="#journey">Parcours</a></li>
@@ -27,8 +28,30 @@
         </div>
     </header>
 
+    <!-- Page d'introduction -->
+    <div class="intro-page" id="introPage">
+        <div class="intro-content">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Découvrez mes compétences, mes services, et mon parcours.</p>
+            <button id="enterButton">Entrer</button>
+        </div>
+    </div>
+
     <!-- Sections principales -->
     <main>
+
+        <!-- Qui suis-je ? -->
+        <section id="quisuisje" class="main-section">
+            <div class="description">
+                <h2>Qui suis-je ?</h2>
+                <p>Bonjour, prénommé Dimitri L'HOSTIS, étudiant en 2e année post-bac, je suis actuellement en reconversion d'étude. Ayant démarré cette nouvelle vie pré-adulte, dans l'objectif de devenir ingénieur, je me suis rendu compte que je ne me sentais pas forcément bien dans cette formation. C'est pourquoi je me penche désormais vers le pôle santé, dans l'intention de devenir kinésithérapeute. </p>
+                <p>Mes études se déroulaient à Nantes, et je suis désormais de retour à Cesson-Sévigné ! Je vous propose donc mon aide et mes services pour des tâches du quotidien, ou exceptionnelles. Jeune, dynamique, libre, et en pleine forme, je suis à votre disposition pour toute tâche, quelle qu'elle soit (dans la limite du raisonnable bien entendu ^^)</p>
+                <p>Je vous laisse prendre plus ample connaissance avec moi juste en dessous, et vous mets à votre disposition un formulaire de contact, ainsi que mes réseaux sur lesquels vous pouvez m'envoyer un message ou m'appeler 24h/24.</p>
+                <p>Il se peut que ne réponde pas aux appels, je vous prie de laisser un message vocal ou écrit pour que je puisse vous rappeler. Merci :&#x29;</p>
+            </div>
+            
+        </section>
+
         <!-- Services -->
         <section id="services" class="main-section">
             <div class="section-row alternate">
@@ -79,25 +102,25 @@
             <div id="services-details" class="detail-section">
                 <h2>Services</h2>
                 <ul>
-                    <li>Travaux pratiques : taille de haies, ménage, rangement.</li>
-                    <li>Services personnels : garde d’enfants, cuisine, promenade d’animaux.</li>
-                    <li>Tâches diverses : récupération de colis, plein d'essence, etc.</li>
+                    <li><strong>Travaux pratiques :</strong> taille de haies, ménage, rangement, nettoyage, en extérieur ou intérieur..</li>
+                    <li><strong>Services personnels :</strong> garde d’enfants, cuisine, promenade d’animaux, aide aux devoirs..</li>
+                    <li><strong>Tâches diverses :</strong> récupération de colis, faire un plein d'essence, et d'autres..</li>
                 </ul>
             </div>
             <div id="skills-details" class="detail-section">
                 <h2>Compétences</h2>
                 <ul>
-                    <li><strong>Diplômes :</strong> BAFA, Bac, ASSR2, Permis.</li>
-                    <li><strong>Skills :</strong> logique, pédagogie, forme physique.</li>
-                    <li><strong>Centres d'intérêt :</strong> cuisine, art, musique, sport, aide à autrui.</li>
+                    <li><strong>Diplômes :</strong> BAFA, Baccalauréat mention assez bien, ASSR2, Permis de conduire.</li>
+                    <li><strong>Skills :</strong> Logique, pédagogie, forme physique, écoute, respect, prise d'initiatives.</li>
+                    <li><strong>Centres d'intérêt :</strong> Cuisine, art, musique, sport, aide à autrui, santé, nutrition.</li>
                 </ul>
             </div>
             <div id="journey-details" class="detail-section">
                 <h2>Parcours</h2>
                 <ul>
-                    <li><strong>Scolaire :</strong> Bac scientifique, prépa intégrée en ingénierie, reconversion santé.</li>
+                    <li><strong>Scolaire :</strong> Bac scientifique, prépa intégrée en ingénierie, reconversion santé (LAS).</li>
                     <li><strong>Sportif :</strong> Multisport (jusqu’à 12 ans), handball, musculation, course à pied.</li>
-                    <li><strong>Artistique :</strong> Dessin, guitare (5 ans), piano (2 ans).</li>
+                    <li><strong>Artistique :</strong> Dessin, peinture, guitare (depuis 5 ans), piano (depuis 2 ans).</li>
                 </ul>
             </div>
         </div>
@@ -149,10 +172,10 @@
     
                 <label class="form-group" for="recurring-service">La demande est-elle pour un service récurrent ?</label>
                 
-                <input class="form-group" type="radio" id="cb_yes" name="bool-recurring" value="yes" onclick="toggleRecurringForm(true)">
+                <input class="form-group" type="radio" id="yes" name="bool-recurring" value="yes" onclick="toggleRecurringForm(true)">
                 <label for="yes">Oui</label>
                 
-                <input class="form-group" type="radio" id="cb_no" name="bool-non-recurring" value="no" onclick="toggleRecurringForm(false)">
+                <input class="form-group" type="radio" id="no" name="bool-non-recurring" value="no" onclick="toggleRecurringForm(false)">
                 <label for="no">Non</label>
 
 
