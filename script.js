@@ -31,8 +31,8 @@ function hideForm() {
 function toggleRecurringForm(isRecurring) {
     const recurringForm = document.getElementById('recurring-form');
     const nonRecurringForm = document.getElementById('non-recurring-form');
-    const yes = document.getElementById('yes');
-    const no = document.getElementById('no');
+    const yes = document.getElementById('cb_yes');
+    const no = document.getElementById('cb_no');
 
     
     if (isRecurring) {
