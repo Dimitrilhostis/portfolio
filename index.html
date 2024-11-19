@@ -6,14 +6,15 @@
     <title>Portfolio de Dimitri</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <!-- Playfair Display pour la police d'écriture -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <!-- FontAwesome pour les icônes -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-content">
-            <img src="photo_cv_cropped.png" alt="Photo de Dimitri" class="profile-pic">
             <h1>Dimitri L'Hostis</h1>
             <nav>
                 <ul>
@@ -28,8 +29,9 @@
 
     <!-- Sections principales -->
     <main>
+        <!-- Services -->
         <section id="services" class="main-section">
-            <div class="section-row">
+            <div class="section-row alternate">
                 <div class="description">
                     <h2>Services</h2>
                     <p>Découvrez les services variés que je propose pour vous simplifier la vie.</p>
@@ -41,21 +43,23 @@
             </div>
         </section>
 
+        <!-- Compétences -->
         <section id="skills" class="main-section">
             <div class="section-row">
-                <div class="description">
-                    <h2>Compétences</h2>
-                    <p>Mes qualifications et mes centres d'intérêt reflètent ma polyvalence.</p>
-                </div>
                 <div class="card" onclick="showDetails('skills-details')">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Voir les compétences</h3>
                 </div>
+                <div class="description">
+                    <h2>Compétences</h2>
+                    <p>Mes qualifications et mes centres d'intérêt reflètent ma polyvalence.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Parcours -->
         <section id="journey" class="main-section">
-            <div class="section-row">
+            <div class="section-row alternate">
                 <div class="description">
                     <h2>Parcours</h2>
                     <p>Mon parcours scolaire, sportif et artistique a façonné qui je suis.</p>
@@ -67,18 +71,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Section contact -->
-    <footer id="contact">
-        <h2>Contact</h2>
-        <ul class="contact-list">
-            <li><i class="fas fa-envelope"></i> <a href="mailto:dimit.lhostis@gmail.com">dimit.lhostis@gmail.com</a></li>
-            <li><i class="fas fa-phone"></i> <a href="tel:+33768704364">07 68 70 43 64</a></li>
-            <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dimitrilhs/" target="_blank">@dimitrilhs</a></li>
-            <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/dimitri.lhostis" target="_blank">Dimitri L'Hostis</a></li>
-            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dimitri-l-hostis-65a14b32a/" target="_blank">Profil LinkedIn</a></li>
-        </ul>
-    </footer>
 
     <!-- Modale -->
     <div id="details" class="details-modal">
@@ -110,5 +102,112 @@
             </div>
         </div>
     </div>
+
+    <!-- Section Contact -->
+    <footer id="contact">
+        <div class="section-row">
+            <!-- Section Description -->
+            <div class="description">
+                <h2>Contactez-moi</h2>
+                <p>Remplissez ce formulaire pour me faire part de vos besoins. Je vous répondrai dans les plus brefs délais !</p>
+            </div>
+            
+            <!-- Carte "Formulaire de Contact" -->
+            <div class="card" id="contact-card" onclick="showForm('contact-form-container')">
+                <h3>Formulaire de Contact</h3>
+                <i class="fas fa-envelope"></i>
+                <p> Cliquez ici pour remplir le formulaire.</p>
+            </div>
+        </div>
+        <div class="contact-container">
+            <h2>Ou via mes réseaux :</h2>
+            <ul class="contact-list">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:dimit.lhostis@gmail.com">dimit.lhostis@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> <a href="tel:+33768704364">07 68 70 43 64</a></li>
+                <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dimitrilhs/" target="_blank">@dimitrilhs</a></li>
+                <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/dimitri.lhostis" target="_blank">Dimitri L'Hostis</a></li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dimitri-l-hostis-65a14b32a/" target="_blank">Profil LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
+        <!-- Formulaire Principal -->
+        <div id="contact-form-container">
+
+            <form id="contact-form"> 
+            
+                <input class="form-group" type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                
+                <input class="form-group" type="text" id="adress" name="adress" placeholder="Votre adresse" required>
+
+                <input class="form-group" type="text" id="number" name="number" placeholder="Votre numéro de téléphone" required>
+
+                <input class="form-group" type="text" id="mail" name="number" placeholder="Votre email" required>
+                
+                <textarea class="form-group" id="needs" name="needs" placeholder="Décrivez vos besoins" required></textarea>
+    
+                <label class="form-group" for="recurring-service">La demande est-elle pour un service récurrent ?</label>
+                
+                <input class="form-group" type="radio" id="yes" name="recurring-service" value="yes" onclick="toggleRecurringForm(true)">
+                <label for="yes">Oui</label>
+                
+                <input class="form-group" type="radio" id="no" name="recurring-service" value="no" onclick="toggleRecurringForm(false)">
+                <label for="no">Non</label>
+
+
+                <!-- Formulaire pour service récurrent -->
+                 <div>
+                    <div style="display: none;" id="recurring-form">
+                        <form>
+                            <label for="days">Quels jours de la semaine ?</label><br>
+
+                            <label class="checkbox-label">Lundi
+                            <input type="checkbox" name="days" value="lundi">
+                            </label>
+                            <label class="checkbox-label">Mardi
+                            <input type="checkbox" name="days" value="mardi">
+                            </label>
+                            <label class="checkbox-label">Mercredi
+                            <input type="checkbox" name="days" value="mercredi">
+                            </label>
+                            <label class="checkbox-label">Jeudi
+                            <input type="checkbox" name="days" value="jeudi">
+                            </label>
+                            <label class="checkbox-label">Vendredi
+                            <input type="checkbox" name="days" value="vendredi">
+                            </label>
+                            <label class="checkbox-label">Samedi
+                            <input type="checkbox" name="days" value="samedi">
+                            </label>
+                            <label class="checkbox-label">Dimanche
+                            <input type="checkbox" name="days" value="dimanche">
+                            </label>
+                            
+                            <label for="date-range">Dates de début et de fin :</label>
+                            <input type="date" id="start-date" name="start-date">
+                            <input type="date" id="end-date" name="end-date">
+                        </form>
+                    </div>
+            
+                <!-- Formulaire pour service non récurrent -->
+                    <div style="display: none;" id="non-recurring-form">
+                        <form>
+                            <label for="date">Choisissez la date :</label>
+                            <input type="date" id="service-date" name="service-date" required>
+                        </form>
+                    </div>
+
+                <button class="close-btn" onclick="hideForm()">×</button>
+
+                <button id="submit" type="submit">Envoyer</button>  
+
+
+            </form>
+        </div>
+    
+        
+    </section>
+    
 </body>
 </html>

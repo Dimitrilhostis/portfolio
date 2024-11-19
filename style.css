@@ -1,23 +1,22 @@
-:root{
-    --txt: #d4a373;
-    --bkdd: #7f5539;
-    --cards: #e8c8a9;
-    --bkdl: #fefae0;
-}
-/* Corps général */
+/* Style général */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Playfair Display', serif; /* Police élégante */
     margin: 0;
     padding: 0;
-    background-color: #faf3dd;
-    color: #2d2424;
+    line-height: 1.6;
+    background-color: #f8f2e7; /* Beige raffiné */
+    color: #2d2b2b;
 }
 
 /* Header */
 header {
-    background-color: #d9a967;
+    background-color: #3e2c20; /* Brun élégant */
     color: white;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 .header-content {
@@ -26,34 +25,42 @@ header {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
 }
 
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid white;
+h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Police agrandie */
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
-    padding: 0;
+    gap: 1.5rem;
     margin: 0;
+    padding: 0;
 }
 
 nav a {
-    color: white;
+    color: #f8f2e7; /* Beige pour le contraste */
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d1b48c; /* Accent doré */
 }
 
 /* Sections principales */
 .main-section {
-    margin: 3rem 0;
-    padding: 2rem 1rem;
     max-width: 1200px;
-    margin: 3rem auto;
+    margin: 4rem auto;
+    padding: 2rem 1rem;
 }
 
 .section-row {
@@ -61,26 +68,44 @@ nav a {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.description {
-    flex: 1;
-    text-align: left;
+.description h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3e2c20;
+    margin-bottom: 0.5rem;
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: #6b5c4a;
 }
 
 .card {
-    flex: 0 0 250px;
-    background-color: #f7d1ba;
+    flex: 0 0 300px;
+    background-color: #d1b48c; /* Ton doré */
     border-radius: 10px;
     text-align: center;
     padding: 1rem;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #3e2c20; /* Icônes dans une teinte brune */
 }
 
 /* Modale */
@@ -91,18 +116,25 @@ nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
     overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-modal.active {
+    display: flex;
 }
 
 .modal-content {
     background: white;
-    margin: 5% auto;
+    margin: 2rem;
     padding: 2rem;
     border-radius: 10px;
-    width: 80%;
+    max-width: 80%;
     position: relative;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .close-btn {
@@ -113,8 +145,198 @@ nav a {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: #3e2c20;
 }
 
 .close-btn:hover {
-    color: #d9a967;
+    color: #d1b48c;
+}
+
+/* Footer */
+footer {
+    background-color: #3e2c20;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-list i {
+    font-size: 1.5rem;
+    color: #d1b48c;
+}
+
+.contact-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Formulaires */
+
+#contact-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Style de base pour les inputs */
+form input[type="text"], 
+form textarea, 
+form input[type="email"], 
+form input[type="date"] {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #d1b48c; /* Soulignement */
+    outline: none; /* Retirer le focus bleu par défaut */
+    font-size: 1.2rem;
+    color: #3e2c20;
+    width: 100%;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Animation du placeholder */
+form input[type="text"]::placeholder, 
+form textarea::placeholder, 
+form input[type="email"]::placeholder, 
+form input[type="date"]::placeholder {
+    color: #b8a493;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: left bottom;
+}
+
+/* Interaction : Placeholder disparaît au survol */
+form input[type="text"]:hover::placeholder, 
+form textarea:hover::placeholder, 
+form input[type="email"]:hover::placeholder, 
+form input[type="date"]:hover::placeholder {
+    opacity: 0; /* Disparaît */
+    transform: translateY(-10px); /* Montée visuelle */
+}
+
+/* Interaction : Placeholder disparaît au focus */
+form input[type="text"]:focus::placeholder, 
+form textarea:focus::placeholder, 
+form input[type="email"]:focus::placeholder, 
+form input[type="date"]:focus::placeholder {
+    opacity: 0; /* Disparaît */
+    transform: translateY(-10px); /* Montée visuelle */
+}
+
+/* Transition sur l'input */
+form input[type="text"]:focus, 
+form textarea:focus, 
+form input[type="email"]:focus, 
+form input[type="date"]:focus {
+    border-bottom: 2px solid #3e2c20; /* Accentuation de la ligne */
+}
+
+
+
+/* Description */
+#contact .section-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#contact .description h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3e2c20;
+}
+
+#contact .description p {
+    color: #5f4b3a;
+    font-size: 1.1rem;
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input{
+    font-family: 'Playfair Display', serif;
+}
+
+textarea{
+    font-family: 'Playfair Display', serif;
+}
+
+#submit{
+    background-color: #3e2c20;
+    border: none;
+    color: #d1b48c;
+    width: 150px;
+    height: 50px;
+    font-size: 150%;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+label{
+    color: #6b5c4a;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: #5f4b3a;
+    color: #b8a493;
 }
