@@ -39,10 +39,12 @@ function toggleRecurringForm(isRecurring) {
         recurringForm.style.display = 'grid';
         nonRecurringForm.style.display = 'none';
         no.checked = false
+        yes.checked = true
     } else {
         recurringForm.style.display = 'none';
         nonRecurringForm.style.display = 'block';
         yes.checked = false
+        no.checked = true
     }
 }
 
