@@ -31,13 +31,18 @@ function hideForm() {
 function toggleRecurringForm(isRecurring) {
     const recurringForm = document.getElementById('recurring-form');
     const nonRecurringForm = document.getElementById('non-recurring-form');
+    const yes = document.getElementById('yes');
+    const no = document.getElementById('no');
+
     
     if (isRecurring) {
         recurringForm.style.display = 'grid';
         nonRecurringForm.style.display = 'none';
+        no.checked = false
     } else {
         recurringForm.style.display = 'none';
         nonRecurringForm.style.display = 'block';
+        yes.checked = false
     }
 }
 

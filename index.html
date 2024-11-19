@@ -157,45 +157,45 @@
 
 
                 <!-- Formulaire pour service récurrent -->
-                 <div>
-                    <div style="display: none;" id="recurring-form">
-                        <div class="days_left">
-                            <label for="days">Quels jours de la semaine ?</label><br>
+                
+                <div style="display: none;" id="recurring-form">
+                    <div class="days_left">
+                        <label for="days">Quels jours de la semaine ?</label><br>
 
-                            <label class="checkbox-label">Lundi
-                            <input type="checkbox" name="lundi" value="lundi">
-                            </label><br>
-                            <label class="checkbox-label">Mardi
-                            <input type="checkbox" name="mardi" value="mardi">
-                            </label><br>
-                            <label class="checkbox-label">Mercredi
-                            <input type="checkbox" name="mercredi" value="mercredi">
-                            </label><br>
-                            <label class="checkbox-label">Jeudi
-                            <input type="checkbox" name="jeudi" value="jeudi">
-                            </label><br>
-                            <label class="checkbox-label">Vendredi
-                            <input type="checkbox" name="vendredi" value="vendredi">
-                            </label><br>
-                            <label class="checkbox-label">Samedi
-                            <input type="checkbox" name="samedi" value="samedi">
-                            </label><br>
-                            <label class="checkbox-label">Dimanche
-                            <input type="checkbox" name="dimanche" value="dimanche">
-                            </label>
-                        </div>
-                        <div class="dates_right">
-                            <label for="date-range">Dates de début et de fin :</label>
-                            <input type="date" id="start-date" name="start-date">
-                            <input type="date" id="end-date" name="end-date">
-                        </div>
+                        <label class="checkbox-label">Lundi
+                        <input type="checkbox" name="yes" value="lundi">
+                        </label><br>
+                        <label class="checkbox-label">Mardi
+                        <input type="checkbox" name="yes" value="mardi">
+                        </label><br>
+                        <label class="checkbox-label">Mercredi
+                        <input type="checkbox" name="yes" value="mercredi">
+                        </label><br>
+                        <label class="checkbox-label">Jeudi
+                        <input type="checkbox" name="yes" value="jeudi">
+                        </label><br>
+                        <label class="checkbox-label">Vendredi
+                        <input type="checkbox" name="yes" value="vendredi">
+                        </label><br>
+                        <label class="checkbox-label">Samedi
+                        <input type="checkbox" name="yes" value="samedi">
+                        </label><br>
+                        <label class="checkbox-label">Dimanche
+                        <input type="checkbox" name="yes" value="dimanche">
+                        </label>
                     </div>
-            
-                <!-- Formulaire pour service non récurrent -->
-                    <div style="display: none;" id="non-recurring-form">
-                            <label for="date">Choisissez la date :</label>
-                            <input type="date" id="service-date" name="service-date" required>
+                    <div class="dates_right">
+                        <label for="date-range">Dates de début et de fin :</label>
+                        <input type="date" id="start-date" name="start-date">
+                        <input type="date" id="end-date" name="end-date">
                     </div>
+                </div>
+        
+            <!-- Formulaire pour service non récurrent -->
+                <div style="display: none;" id="non-recurring-form">
+                        <label for="date">Choisissez la date :</label>
+                        <input type="date" id="service-date" name="service-date">
+                </div>
 
                 <button class="close-btn" onclick="hideForm()">×</button>
 
