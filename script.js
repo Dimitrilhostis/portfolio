@@ -33,7 +33,7 @@ function toggleRecurringForm(isRecurring) {
     const nonRecurringForm = document.getElementById('non-recurring-form');
     
     if (isRecurring) {
-        recurringForm.style.display = 'block';
+        recurringForm.style.display = 'grid';
         nonRecurringForm.style.display = 'none';
     } else {
         recurringForm.style.display = 'none';

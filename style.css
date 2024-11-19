@@ -340,3 +340,7 @@ label{
     background-color: #5f4b3a;
     color: #b8a493;
 }
+
+#recurring-form{
+    grid-template-columns: 50% 50%;
+}

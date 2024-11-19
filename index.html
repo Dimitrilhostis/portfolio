@@ -135,7 +135,7 @@
         <!-- Formulaire Principal -->
         <div id="contact-form-container">
 
-            <form id="contact-form"> 
+            <form id="contact-form" action="https://formspree.io/f/mpwzlddo" method="POST"> 
             
                 <input class="form-group" type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
                 
@@ -143,59 +143,58 @@
 
                 <input class="form-group" type="text" id="number" name="number" placeholder="Votre numéro de téléphone" required>
 
-                <input class="form-group" type="text" id="mail" name="number" placeholder="Votre email" required>
+                <input class="form-group" type="text" id="mail" name="mail" placeholder="Votre email" required>
                 
                 <textarea class="form-group" id="needs" name="needs" placeholder="Décrivez vos besoins" required></textarea>
     
                 <label class="form-group" for="recurring-service">La demande est-elle pour un service récurrent ?</label>
                 
-                <input class="form-group" type="radio" id="yes" name="recurring-service" value="yes" onclick="toggleRecurringForm(true)">
+                <input class="form-group" type="radio" id="yes" name="bool-recurring" value="yes" onclick="toggleRecurringForm(true)">
                 <label for="yes">Oui</label>
                 
-                <input class="form-group" type="radio" id="no" name="recurring-service" value="no" onclick="toggleRecurringForm(false)">
+                <input class="form-group" type="radio" id="no" name="bool-non-recurring" value="no" onclick="toggleRecurringForm(false)">
                 <label for="no">Non</label>
 
 
                 <!-- Formulaire pour service récurrent -->
                  <div>
                     <div style="display: none;" id="recurring-form">
-                        <form>
+                        <div class="days_left">
                             <label for="days">Quels jours de la semaine ?</label><br>
 
                             <label class="checkbox-label">Lundi
-                            <input type="checkbox" name="days" value="lundi">
-                            </label>
+                            <input type="checkbox" name="lundi" value="lundi">
+                            </label><br>
                             <label class="checkbox-label">Mardi
-                            <input type="checkbox" name="days" value="mardi">
-                            </label>
+                            <input type="checkbox" name="mardi" value="mardi">
+                            </label><br>
                             <label class="checkbox-label">Mercredi
-                            <input type="checkbox" name="days" value="mercredi">
-                            </label>
+                            <input type="checkbox" name="mercredi" value="mercredi">
+                            </label><br>
                             <label class="checkbox-label">Jeudi
-                            <input type="checkbox" name="days" value="jeudi">
-                            </label>
+                            <input type="checkbox" name="jeudi" value="jeudi">
+                            </label><br>
                             <label class="checkbox-label">Vendredi
-                            <input type="checkbox" name="days" value="vendredi">
-                            </label>
+                            <input type="checkbox" name="vendredi" value="vendredi">
+                            </label><br>
                             <label class="checkbox-label">Samedi
-                            <input type="checkbox" name="days" value="samedi">
-                            </label>
+                            <input type="checkbox" name="samedi" value="samedi">
+                            </label><br>
                             <label class="checkbox-label">Dimanche
-                            <input type="checkbox" name="days" value="dimanche">
+                            <input type="checkbox" name="dimanche" value="dimanche">
                             </label>
-                            
+                        </div>
+                        <div class="dates_right">
                             <label for="date-range">Dates de début et de fin :</label>
                             <input type="date" id="start-date" name="start-date">
                             <input type="date" id="end-date" name="end-date">
-                        </form>
+                        </div>
                     </div>
             
                 <!-- Formulaire pour service non récurrent -->
                     <div style="display: none;" id="non-recurring-form">
-                        <form>
                             <label for="date">Choisissez la date :</label>
                             <input type="date" id="service-date" name="service-date" required>
-                        </form>
                     </div>
 
                 <button class="close-btn" onclick="hideForm()">×</button>
