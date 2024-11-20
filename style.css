@@ -1,5 +1,5 @@
 /* Style général */
-body {
+.index-body {
     font-family: 'Playfair Display', serif; /* Police élégante */
     margin: 0;
     padding: 0;
@@ -34,6 +34,11 @@ h1 {
     font-size: 2.5rem; /* Police agrandie */
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+a {
+    color: #f8f2e7;
+    text-decoration: none;
 }
 
 nav ul {
@@ -418,15 +423,55 @@ label{
     grid-template-columns: 50% 50%;
 }
 
+/* Responsive Design for bigger screens */
+@media screen and (min-width: 768px) {
+    
+    .header-content i {
+        display: none;
+    }
+
+    #dimitri {
+        transition: color 0.3s;
+    }
+
+    #dimitri:hover {
+        color: #d1b48c;
+        cursor: pointer;
+    }
+
+    #nav_bar {
+        display: block;
+    }
+
+}
+
 /* Responsive Design for smaller screens */
 @media screen and (max-width: 768px) {
-    body {
+    .index-body {
         font-size: 14px;
     }
 
     .header-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-items: center;
+    }
+
+    #dimitri {
+        padding-bottom: 1.5em;
+    }
+
+    #menu {
+        padding-left: 3em;
+        color: #f8f2e7;
+    }
+
+    #nav_bar {
+        display: none;
     }
 
     .section-row {
@@ -467,4 +512,28 @@ label{
     .modal-content {
         padding: 1rem;
     }
+}
+
+
+
+/* CV.html */
+
+.cv_body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.cv_body object {
+    width: 100%;
+    height: 59.5rem;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    
+    .cv_body object {
+        height: 50rem;
+    }
+
 }

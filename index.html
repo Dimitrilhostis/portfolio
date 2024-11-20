@@ -11,12 +11,15 @@
     <!-- FontAwesome pour les icônes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="index-body">
     <!-- Header -->
     <header>
         <div class="header-content">
-            <h1>Dimitri L'Hostis</h1>
-            <nav>
+            <div class="menu">
+                <a href="cv.html" target="_blank" rel="noopener noreferrer"><h1 id="dimitri" onclick="open()">Dimtiri L'Hostis</h1></a>
+                <h1><i class="fas fa-bars" id="menu" onclick="showNav()"></i></h1>
+            </div>
+            <nav id="nav_bar">
                 <ul>
                     <li><a href="#quisuisje">Qui suis-je ?</a></li>
                     <li><a href="#services">Services</a></li>

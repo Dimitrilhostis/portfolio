@@ -3,6 +3,18 @@ const introPage = document.getElementById('introPage');
 const mainPage = document.getElementById('mainPage');
 const enterButton = document.getElementById('enterButton');
 
+// Menu nav
+function showNav() {
+    const nav = document.getElementById("nav_bar")
+
+    if (nav.style.display == "flex") {
+        nav.style.display = "none"
+    }
+    else {
+        nav.style.display = "flex"
+    }
+}
+
 // Ajout d'un événement au clic sur le bouton
 enterButton.addEventListener('click', () => {
     // Anime la page d'intro vers le haut
