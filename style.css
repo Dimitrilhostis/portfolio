@@ -176,6 +176,11 @@ nav a:hover {
     color: #3e2c20; /* Icônes dans une teinte brune */
 }
 
+#christmas {
+    color: #8B0000;
+    font-size: 110%;
+}
+
 /* Modale */
 .details-modal {
     display: none;
