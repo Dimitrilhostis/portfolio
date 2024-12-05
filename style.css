@@ -544,6 +544,11 @@ label{
     .modal-content {
         padding: 1rem;
     }
+
+    .details-modal {
+        max-width: 750px;
+        max-height: 1200px;
+    }
 }
 
 
